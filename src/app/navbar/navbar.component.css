@@ -1,20 +1,28 @@
 ul,
-ul button {
+#first-item,
+button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 ul {
-  width: 372px;
+  width: 300px;
   height: 67px;
   border: 1px solid #6eeb83;
   background: #272727;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   margin: 0 auto;
   left: 50%;
-  /* margin-left: -50%; */
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#first-item,
+.action-btn {
+  gap: 10px;
 }
 
 #initial {
@@ -23,10 +31,44 @@ ul {
   background-color: var(--lemon);
   border-radius: 50%;
   color: var(--black);
-  font-weight: 400;
-  font-size: 20px;
 }
 
 .hide {
   display: none;
+}
+
+@media screen and (min-width: 600px) {
+  ul {
+    width: 80%;
+  }
+
+  .hide {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  ul,
+  #first-item,
+  button {
+    flex-direction: column;
+  }
+
+  ul {
+    width: 95px;
+    height: 100%;
+    border: 0;
+    border-right: 1px solid #6eeb83;
+    left: 45px;
+  }
+
+  #initial {
+  width: 66px;
+  height: 66px;
+  font-size: 32px;
+}
+
+  .hide-2 {
+    display: none;
+  }
 }
