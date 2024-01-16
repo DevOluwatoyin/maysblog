@@ -21,7 +21,10 @@ body {
 
 a,
 li,
-button,
-input {
+button {
   all: unset;
 }
+
+/* body:has(#check:checked){
+  --lemon: white;
+} */
