@@ -33,6 +33,7 @@ h2::before {
   text-align: left;
   padding: 5px 10px;
   background-color: transparent;
+  color: var(--white);
 }
 
 #search::placeholder {
