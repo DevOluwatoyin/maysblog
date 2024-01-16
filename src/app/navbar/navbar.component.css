@@ -12,12 +12,12 @@ ul {
   border: 1px solid #6eeb83;
   background: #272727;
   position: fixed;
-  bottom: 10px;
+  z-index: 2;
+  bottom: 0px;
   margin: 0 auto;
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
-  font-weight: 400;
 }
 
 #first-item,
@@ -63,10 +63,10 @@ ul {
   }
 
   #initial {
-  width: 66px;
-  height: 66px;
-  font-size: 32px;
-}
+    width: 66px;
+    height: 66px;
+    font-size: 32px;
+  }
 
   .hide-2 {
     display: none;
