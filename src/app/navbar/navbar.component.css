@@ -1,0 +1,32 @@
+ul,
+ul button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ul {
+  width: 372px;
+  height: 67px;
+  border: 1px solid #6eeb83;
+  background: #272727;
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+  left: 50%;
+  /* margin-left: -50%; */
+}
+
+#initial {
+  width: 40px;
+  height: 40px;
+  background-color: var(--lemon);
+  border-radius: 50%;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
