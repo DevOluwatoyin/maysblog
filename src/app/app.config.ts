@@ -3,13 +3,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { postDataInterceptor } from './post-data.interceptor';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideRouter(routes),
-    provideClientHydration(),
-    provideHttpClient(withInterceptors([postDataInterceptor])),
-  ],
+  providers: [provideRouter(routes), provideClientHydration()]
 };

@@ -1,6 +1,5 @@
 <div class="posts-container">
   <h2>All blog Posts</h2>
-<!-- <input type="checkbox" name="check" id="check"> -->
   <div class="search-bar">
     <input
       type="search"
@@ -10,15 +9,10 @@
     />
   </div>
 
-  <div class="post-preview">
-    <h4>15 Disadvantages Of Freedom And How You Can Workaround It.</h4>
+  <div class="post-preview" *ngFor="let post of posts">
+    <h4>{{ post.owner.id }}</h4>
     <p class="post-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure d<span class="read-more"
-        >...read more</span
-      >
+      {{ post.text }}<span class="read-more">...read more</span>
     </p>
     <div class="author-info">
       <p class="post-date">27 May 2022</p>
