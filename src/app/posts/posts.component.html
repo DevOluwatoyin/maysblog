@@ -23,4 +23,17 @@
       <button>#marketing</button><button>#reading</button>
     </div>
   </div>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <span>Page {{ currentPage }} of {{ renderedPages }}</span>
+    <button
+      (click)="nextPage()"
+      [disabled]="currentPage * itemsPerPage >= renderedPages"
+    >
+      Next
+    </button>
+  </div>
 </div>
