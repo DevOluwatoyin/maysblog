@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'blog-posts',
@@ -15,13 +16,13 @@ export class PostsComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalPosts = 0;
-  renderedPages:number = 0;
+  renderedPages: number = 0;
 
   ngOnInit(): void {
     this.fetchPosts();
   }
 
-  fetchPosts() {
+  fetchPosts(): void {
     const skip = (this.currentPage - 1) * this.itemsPerPage;
 
     this.http
@@ -36,10 +37,7 @@ export class PostsComponent implements OnInit {
       })
       .subscribe((postsData: any) => {
         this.posts = postsData.data;
-        this.totalPosts = postsData.total; 
-        console.log(this.totalPosts);
-        console.log(this.posts);
-
+        this.totalPosts = postsData.total;
         this.renderedPages = Math.ceil(this.totalPosts / this.itemsPerPage);
       });
   }

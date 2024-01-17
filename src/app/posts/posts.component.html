@@ -29,10 +29,7 @@
       Previous
     </button>
     <span>Page {{ currentPage }} of {{ renderedPages }}</span>
-    <button
-      (click)="nextPage()"
-      [disabled]="currentPage * itemsPerPage >= renderedPages"
-    >
+    <button (click)="nextPage()" [disabled]="currentPage >= renderedPages">
       Next
     </button>
   </div>
